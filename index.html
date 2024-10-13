@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Código QR</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #b6b6b6;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .qr-generator {
+            background-color: white;
+            border-radius: 13px;
+            padding: 30px 50px;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.34);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 400px;
+        }
+
+        h1 {
+            color: #2196F3;
+            text-align: center;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            border: 1.5px solid #cccccc;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border 0.3s;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border: 2px solid #66c7f5;
+        }
+
+        button {
+            background-color: #66c7f5;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 7px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            margin: 0 auto; 
+        }
+
+        button:hover {
+            background-color: #2196F3;
+        }
+
+        #qrcode {
+            margin-top: 20px;
+            border: 2px solid #2196F3;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: white;
+            display: inline-block;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="qr-generator">
+        <h1>Gerador de Código QR</h1>
+        <input type="text" id="text-input" placeholder="Ex: lipedevv.github.io/qr-code">
+        <button id="generate">Gerar QR Code</button>
+        <div id="qrcode"></div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#generate').click(function() {
+                var text = $('#text-input').val();
+                $('#qrcode').empty(); // Limpa o código QR anterior
+                $('#qrcode').qrcode(text); // Gera o novo código QR
+            });
+        });
+    </script>
+</body>
+</html>
