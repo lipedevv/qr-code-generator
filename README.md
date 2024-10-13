@@ -58,3 +58,4 @@ To run this project locally, follow these steps:
    ```bash
    git clone https://github.com/lipedevv/qr-code-generator.git
    cd qr-code-generator
+
