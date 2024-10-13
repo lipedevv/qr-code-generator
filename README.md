@@ -26,7 +26,7 @@ Para executar este projeto localmente, siga estes passos:
 
 1. **Clone o Repositório**:
    ```bash
-   git clone https://github.com/yourusername/qr-code-generator.git
+   git clone https://github.com/lipedevv/qr-code-generator.git
    cd qr-code-generator
 
 
@@ -56,5 +56,5 @@ To run this project locally, follow these steps:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/qr-code-generator.git
+   git clone https://github.com/lipedevv/qr-code-generator.git
    cd qr-code-generator
